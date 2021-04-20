@@ -80,7 +80,7 @@ loadAndProcessData().then(counties=> {
           				
         		})
 			
-	let legendScale = d3.scale.linear()
+	let legendScale = d3.scaleLinear()
 		.domain([0 , d3.max(counties.features, (d) => d.properties.bachelorsOrHigher)])
   		.range([0 , 180]).nice();  
 		//.nice makes the ends of the scale easier on the eye
