@@ -89,7 +89,7 @@ loadAndProcessData().then(counties=> {
 
 	colorLegend.append("g")
       		.attr("id", "legend-axis")
-      		.attr("transform", "translate("+0+", "-(160)+")")
+      		.attr("transform", "translate("+0+", "+(0)+")")
       		.call(legendAxis); 
 
 });
