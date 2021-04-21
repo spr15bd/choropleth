@@ -46,7 +46,7 @@ loadAndProcessData().then(counties=> {
 	// create a colorLegend function. 
 	const colorLegend = svg.append("g")
         	.attr("id", "legend")
-        	.attr("transform", "translate("+(width-padding*2)+", -20)")
+        	.attr("transform", "translate("+(width-(padding*2))+", "+(-padding)+")")
 		//.attr("transform", "translate("+padding+", "+(height-padding/2)+")")
         	.text("Key");
 	for (let x=0; x<90; x+=10) {
