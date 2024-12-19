@@ -31,11 +31,9 @@ const loadAndProcessData = ()  =>
 			return counties;
 		});
 
-
 svg.call(d3.zoom().on('zoom', () => {
 	g.attr('transform', d3.event.transform);
 }));
-
 
 loadAndProcessData().then(counties=> {
 	// our colour range, which will map data values to colours
@@ -76,9 +74,7 @@ loadAndProcessData().then(counties=> {
           		})
         		.on('mouseout', () => {
           			tooltip
-          				.style('opacity', 0);
-					
-          				
+          				.style('opacity', 0);	
         		})
 			
 	let legendScale = d3.scaleLinear()
@@ -94,16 +90,3 @@ loadAndProcessData().then(counties=> {
       		.call(legendAxis); 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-	
