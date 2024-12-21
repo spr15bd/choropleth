@@ -17,7 +17,6 @@ const loadAndProcessData = ()  =>
 			d3.json('https://raw.githubusercontent.com/no-stack-dub-sack/testable-projects-fcc/master/src/data/choropleth_map/counties.json')
 		])
 		.then(([eduData, topoJSONdata]) => {
-			
 			const rowFromId = eduData.reduce((accumulator, d) => {
 				accumulator[d.fips] = d;
 				return accumulator;
@@ -58,7 +57,6 @@ loadAndProcessData().then(counties=> {
 	// Data join
 	g.selectAll('path').data(counties.features)
 		.enter().append('path')
-			
 			.attr('class', 'county')
 			.attr('data-fips', d => d.properties.fips)
 			.attr('data-education', d => d.properties.bachelorsOrHigher)
